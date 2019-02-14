@@ -29,6 +29,7 @@
             android:orientation="vertical">
             <!--Name-->
             <EditText
+                android:id="@+id/edtName"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Name:"
@@ -36,12 +37,14 @@
 
             <!--User-->
             <EditText
+                android:id="@+id/edtUser"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="User:"
                 android:inputType="text" />
             <!--Password-->
             <EditText
+                android:id="@+id/edtPassword"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Password:"

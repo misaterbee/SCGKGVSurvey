@@ -11,7 +11,7 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
-
+import android.widget.EditText;
 
 
 /**
@@ -48,6 +48,40 @@ public class RegisterFragment extends Fragment {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
+
+        if (item.getItemId()== R.id.itemUpload) {
+
+//            Get Value  From EditText
+            EditText nameEditText = getView().findViewById(R.id.edtName);
+            EditText userEditText = getView().findViewById(R.id.edtUser);
+            EditText passwordEditText = getView().findViewById(R.id.edtPassword);
+
+//            Change Type Data To String
+            String name = nameEditText.getText().toString().trim();
+            String user = userEditText.getText().toString().trim();
+            String password = passwordEditText.getText().toString().trim();
+
+//            Check Space
+            if (name.isEmpty() || user.isEmpty() || password.isEmpty()) {
+//                Have Space
+                MyAlert myAlert = new MyAlert(getActivity());
+                myAlert.normalDialog("Have Space","Please Fill All Blanks");
+
+
+
+            } else {
+        //  No space
+            }
+
+
+        } // if
+
+
+
+
+
+
+
         return super.onOptionsItemSelected(item);
     }
 
